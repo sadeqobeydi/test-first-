@@ -1,0 +1,127 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    user-select: none; 
+}
+
+@font-face {
+    font-family: 'lalezar';
+    src: url("font/lalezar.woff") format('woff');
+}
+@font-face {
+    font-family: 'byekan';
+    src: url('font/Byekan.ttf');
+}
+/* --------------------- navigator ----------------- */
+
+nav{
+    width: 100vw;
+    height: 90px;
+    background: linear-gradient(to right , #c5eeeb , #ffffff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: byekan;
+    box-shadow: 0px 0px 15px gray;
+    position: fixed;
+    top: 20px;
+}
+nav :where(.logo , .user-login){
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    
+    font-family: byekan;
+
+}
+
+nav .menu{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+}
+
+/* --------------------- menu ----------------- */
+
+nav .menu ul{
+    /* background-color: green; */
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+nav .menu ul li{
+    text-align: center;
+    margin: 0px 6px;
+    font-size: 14px;
+    color: #83114E;
+    position: relative;
+    cursor: pointer;
+    padding: 0px 10px;
+}
+nav .menu ul li::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2.5px;
+    background-color: #83114E;
+    position: absolute;
+    bottom: -12px;
+    left: 0px;
+    transition: all .2s;
+    opacity: 0;
+}
+nav .menu ul li:hover::after{
+    opacity: 1;
+}
+
+/* --------------------- logo ----------------- */
+nav .logo{
+    justify-content: end;
+}
+.logo img{
+    width: 60px;
+    margin: 0px 20px; 
+}
+
+/* --------------------- user-login ----------------- */
+
+nav .user-login{
+    justify-content: start;
+}
+nav .user-login button{
+    border: none;
+    outline: none;
+    font-family: byekan;
+    padding: 8px 18px;
+    color: white;
+    background-color: #83114E;
+    border-radius: 3px;
+    border: 2px solid rgb(193, 253, 255);
+    outline: 3px solid #83114E;
+    transition: all .3s;   
+}
+nav .user-login button:hover{
+    transform: scale(1.1);
+    outline-color: transparent;
+}
+nav .user-login button i{
+    color: white;
+    margin: 0px 2px;
+}
+
+.content{
+    width: 100vw;
+    height: 400px;
+    margin-top: 300px;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+
