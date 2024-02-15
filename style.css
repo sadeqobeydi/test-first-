@@ -118,10 +118,18 @@ nav .user-login button i{
 
 .content{
     width: 100vw;
-    height: 400px;
+    height: 100vh;
     margin-top: 300px;
     background-color: lightgray;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.content .keybord {
+    width: 900px;
+    height: 370px;
+    background-color: rebeccapurple;
+}
 
