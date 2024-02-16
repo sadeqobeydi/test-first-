@@ -1,6 +1,7 @@
 
-let select = document.getElementById('selec');
+document.cookie = "name=sadeq";
+document.cookie = "password=12345";
 
-select.onclick = (e)=>{
-    console.log(e.target.selectedOption);;
-}
+document.querySelector('h1').innerHTML = document.cookie
+
+console.log(document.cookie.includes("password=12345"));

@@ -133,3 +133,8 @@ nav .user-login button i{
     background-color: rebeccapurple;
 }
 
+h1{
+    text-align: center;
+    margin: 15px 0px;
+    font-family: sans-serif;
+}
