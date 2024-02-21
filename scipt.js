@@ -1,10 +1,17 @@
 
-document.cookie = "name=sadeq";
-document.cookie = "password=12345";
-
-document.querySelector('h1').innerHTML = document.cookie
-
-console.log(document.cookie.includes("password=12345"));
-
-
-console.log("this is commite")
+function cheskScrool(){
+    let boxes = document.getElementsByClassName('boxes')
+    
+    for( let i = 0 ; i < boxes.length ; i++ ){
+        if(boxes[i].getBoundingClientRect().top < 400){
+            boxes[i].classList.add("active")
+        }
+        else{
+            boxes[i].classList.remove("active")  
+        }
+    }
+}
+document.onscroll = (e)=>{
+    cheskScrool()
+    
+}
