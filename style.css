@@ -180,7 +180,7 @@ h1{
     box-shadow: 0px 0px 10px rgb(37, 37, 37);
     margin: 10px;
     scale: 0.5;
-    /* opacity: 0; */
+    opacity: 0;
     transition: all 0.8s;
 }
 .client .boxes.active{
@@ -189,11 +189,17 @@ h1{
 }
 
 
-.taraz{
+.enter{
     width: 100%;
     position: fixed;
-    /* top: 50px; */
     height: 1px;
     z-index: 10;
     background-color: rgb(57, 255, 57);
+}
+.out{
+    width: 100%;
+    position: fixed;  
+    height: 1px;
+    z-index: 10;
+    background-color: rgb(255, 57, 57);
 }

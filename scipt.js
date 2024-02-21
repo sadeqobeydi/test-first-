@@ -13,20 +13,23 @@
 } */
 
 let heightWindow = window.innerHeight
-let taraz = document.querySelector(".taraz")
+let enterLevel = document.querySelector(".enter")
+let outLevel = document.querySelector(".out")
 
-let darsad = (heightWindow*20)/100
-taraz.style.top=`${darsad}px`
+let arivelPosition = (heightWindow*70)/100
+let outPosition = (heightWindow*15)/100
+
+enterLevel.style.top=`${arivelPosition}px`
+outLevel.style.top=`${outPosition}px`
+
 
 function cheskScrool(){
-
-    
     let boxes = document.getElementsByClassName('boxes')
     for( let i = 0 ; i < boxes.length ; i++ ){
 
         
 
-        if(boxes[i].getBoundingClientRect().top < darsad){
+        if(boxes[i].getBoundingClientRect().top < arivelPosition){
             boxes[i].classList.add("active")
         }
         else{
