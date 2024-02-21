@@ -2,3 +2,6 @@ images
 font
 data.json
 audio
+node_modules
+db.json
+package.json
