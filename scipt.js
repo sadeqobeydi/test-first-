@@ -13,24 +13,32 @@
 } */
 
 let heightWindow = window.innerHeight
-let enterLevel = document.querySelector(".enter")
-let outLevel = document.querySelector(".out")
+// let enterLevel = document.querySelector(".enter")
+// let outLevel = document.querySelector(".out")
 
-let arivelPosition = (heightWindow*70)/100
-let outPosition = (heightWindow*15)/100
+let outPosition = (heightWindow*60)/100
+let arivelPosition = (heightWindow*95)/100
 
-enterLevel.style.top=`${arivelPosition}px`
-outLevel.style.top=`${outPosition}px`
+// enterLevel.style.top=`${arivelPosition}px`
+// outLevel.style.top=`${outPosition}px`
 
+let boxes = document.getElementsByClassName('boxes')
 
 function cheskScrool(){
-    let boxes = document.getElementsByClassName('boxes')
+
     for( let i = 0 ; i < boxes.length ; i++ ){
 
-        
+        let position =boxes[i].getBoundingClientRect().top
+        if(position <= arivelPosition && position >= outPosition){
+            let content = (arivelPosition-outPosition)
+            let toper = boxes[i].getBoundingClientRect().top -arivelPosition
 
-        if(boxes[i].getBoundingClientRect().top < arivelPosition){
-            boxes[i].classList.add("active")
+           let darsad = Math.abs(((toper*100)+10)/content)
+
+           boxes[i].style.transform = `scale(${darsad}%)`
+           boxes[i].style.opacity = `${darsad}%`
+
+
         }
         else{
             boxes[i].classList.remove("active")  

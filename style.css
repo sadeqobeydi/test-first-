@@ -179,9 +179,8 @@ h1{
     border-radius: 15px;
     box-shadow: 0px 0px 10px rgb(37, 37, 37);
     margin: 10px;
-    scale: 0.5;
-    opacity: 0;
     transition: all 0.8s;
+    transform: scale(0%);
 }
 .client .boxes.active{
     scale: 1;
