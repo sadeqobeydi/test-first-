@@ -195,6 +195,9 @@ h1{
     z-index: 10;
     background-color: rgb(57, 255, 57);
 }
+.enter:hover{
+    height: 2px;
+}
 .out{
     width: 100%;
     position: fixed;  
@@ -202,3 +205,4 @@ h1{
     z-index: 10;
     background-color: rgb(255, 57, 57);
 }
+
